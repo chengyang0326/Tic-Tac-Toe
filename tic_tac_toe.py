@@ -1,5 +1,5 @@
 from IPython.display import clear_output
-import random
+import secrets
 
 
 def display_board(board):
@@ -36,7 +36,7 @@ def win_check(board,mark):
 
 
 def choose_first():
-    if random.randint(0, 1) == 0:
+    if secrets.SystemRandom().randint(0, 1) == 0:
         return 'Player 2'
     else:
         return 'Player 1'
